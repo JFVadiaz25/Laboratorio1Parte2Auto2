@@ -22,6 +22,9 @@ def about(request):
     #return HttpResponse('<h1>Welcome to About Page</h1>')
     return render(request,'about.html')
 
+def signup(request):
+    email = request.GET.get('email')
+    return render(request, 'signup.html',{'email':email})
 '''
 def statistics_view1(request): 
     matplotlib.use('Agg')
